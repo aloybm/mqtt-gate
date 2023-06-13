@@ -34,7 +34,7 @@ client.on('message', async function (topic, message) {
             console.log(`${result}`)
         } else if (topic === 'keluar') {
             const result = await keluar(data.idkartu, data.idgate);
-            client.publish('keluar/result', JSON.parse(result.toString()));
+            client.publish('keluar/result', result.toString());
             console.log(`${result}`)
         }
     } catch (err) {
